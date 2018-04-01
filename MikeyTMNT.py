@@ -26,7 +26,7 @@ async def meow(ctx):
 @bot.command(pass_context=True)
 async def addrole(ctx, user: discord.Member, role: discord.Role):
     await bot.addroles(member, role)
-    await bot.say(" {}, has got a BOOYAPROMOTION!".format(user.name))
+    await bot.say("{}, has got a BOOYAPROMOTION!".format(user.name))
 
 @bot.command(pass_context=True)
 async def info(ctx, user: discord.Member):
@@ -38,12 +38,8 @@ async def info(ctx, user: discord.Member):
     await bot.say("The user joined at: {}".format(user.joined_at))
 
 @bot.command(pass_context=True)
-async def cat(ctx):
-    await bot.say("Kitty Cuteness overload starting.... NOW!")
-async with aiohttp.ClientSession() as cs:
-     async with cs.get('https://random.cat/meow') as r:
-        res = await r.json()
-        print(res['file'])
+async def best_experience(ctx):
+    await bot.say("The best experience for me, was when we all went to Transylvania, to stop the Savanti Romero, and Raph turned into a vampire! Haha!")
 
 @bot.command(pass_context=True)
 async def kick(ctx, user: discord.Member):
@@ -51,4 +47,3 @@ async def kick(ctx, user: discord.Member):
     await bot.kick(user)
 
 bot.run("NDMwMTM5MDI4MjMxMjkwODgw.DaL4Qg.2sWt-eCiZl-kd664UgLi0TxoVIE")
-
