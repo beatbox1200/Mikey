@@ -50,15 +50,4 @@ async def kick(ctx, user: discord.Member):
     await bot.say(":boot: {}, You boi, HAVE BEEN BOOYAKAKICKED!!".format(user.name))
     await bot.kick(user)
 
-@bot.command(pass_context=True)
-async def inac_letter(ctx, *, suggestion):
-    await bot.send_message(discord.Object ("430143273483632641"), """
-Username:
-Rank:
-Reason of Absence:
-Time of Leaving:
-Time of Returning:
-Inactivity Letter: """.format(ctx.message.author.name, ctx.message.author.top_role.name, suggestion))
-    await bot.say("Your Inactivity Letter has been recorded, sent to an HR, and will be processed within a 48 hour wait.")
-
 bot.run("NDMwMTM5MDI4MjMxMjkwODgw.DaL4Qg.2sWt-eCiZl-kd664UgLi0TxoVIE")
