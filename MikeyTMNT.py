@@ -7,7 +7,7 @@ import asyncio
 import aiohttp
 import chalk
 
-bot = commands.Bot(command_prefix='#')
+bot = commands.Bot(command_prefix='M!')
 
 @bot.event
 async def on_ready():
@@ -15,19 +15,13 @@ async def on_ready():
     print ("I am running on " + bot.user.name)
     print ("With the ID: " + bot.user.id)
 
-@bot.event
-async def on_member_join():
-
-
 @bot.command(pass_context=True)
 async def brothers(ctx):
     await bot.say("I have 3 brothers, Leo, Raph, and Donnie.")
 
-
 @bot.command(pass_context=True)
 async def meow(ctx):
     await bot.say("Aww, Ice Cream Kitty, you so cute! :icecream: :cat: ")
-
 
 @bot.command(pass_context=True)
 async def addrole(ctx, user: discord.Member, role: discord.Role):
@@ -57,7 +51,7 @@ async def kick(ctx, user: discord.Member):
     await bot.kick(user)
 
 @bot.command(pass_context=True)
-async def inac_letter(ctx, *, letter):
+async def inac_letter(ctx, *, suggestion):
     await bot.send_message(discord.Object ("430143273483632641"), """
 Username:
 Rank:
