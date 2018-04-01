@@ -30,7 +30,7 @@ async def addrole(ctx, user: discord.Member, role: discord.Role):
 
 @bot.command(pass_context=True)
 async def info(ctx, user: discord.Member):
-    await bot.say("Don't tell Leo I got into his Discord user lookup equipment... :zipper_mouth: :mask: :hushed: ")
+    await bot.say("Don't tell Leo I got into his Discord user lookup equipment... :zipper_mouth: :mask: :hushed:")
     await bot.say("The users name is: {}".format(user.name))
     await bot.say("The users ID is: {}".format(user.id))
     await bot.say("The users status is: {}".format(user.status))
@@ -51,3 +51,4 @@ async def kick(ctx, user: discord.Member):
     await bot.kick(user)
 
 bot.run("NDMwMTM5MDI4MjMxMjkwODgw.DaL4Qg.2sWt-eCiZl-kd664UgLi0TxoVIE")
+
