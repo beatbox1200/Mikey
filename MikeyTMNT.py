@@ -45,4 +45,4 @@ async def kick(ctx, user: discord.Member):
     await bot.say(":boot: {}, You boi, HAVE BEEN BOOYAKAKICKED!!".format(user.name))
     await bot.kick(user)
 
-bot.run(os.getenv('TOKEN'))
+ bot.run(os.getenv('TOKEN'))
